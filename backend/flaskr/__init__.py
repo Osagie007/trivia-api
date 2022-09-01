@@ -14,7 +14,7 @@ def paginate_questions(request, question):
     start = (page - 1) * QUESTIONS_PER_PAGE
     end = start + QUESTIONS_PER_PAGE
 
-    questions = [question.format() for question in question]
+    questions = [q.format() for q in question]
     current_questions = questions[start:end]
 
     return current_questions
